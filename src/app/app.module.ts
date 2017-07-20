@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
-import { TeamComponent } from './team/team.component';
 import { PlayersComponent } from './players/players.component';
 
 @NgModule({
@@ -15,7 +14,6 @@ import { PlayersComponent } from './players/players.component';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    TeamComponent,
     PlayersComponent,
   ],
   imports: [

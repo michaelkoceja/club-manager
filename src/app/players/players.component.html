@@ -1,6 +1,15 @@
 <h3>Meet our players!</h3>
 <h4>Keeper:</h4>
-<li><a href="#">Keylor Navas</a></li>
+<div *ngFor="let info of infos" (click)="goToDetailPage(info)" class="panel panel-default">
+  <div class="panel-body">
+    <h3><strong>{{info.name}}</strong> <em>{{info.position}}</em></h3>
+  </div>
+</div>
+
+
+
+
+<!-- <li><a href="#">Keylor Navas</a></li>
 <h4>Defenders:</h4>
 <li><a href="#">Carvajal</a></li>
 <li><a href="#">Varane</a></li>
@@ -15,4 +24,4 @@
 <li><a href="#">Ronaldo</a></li>
 <li><a href="#">Benzema</a></li>
 <h4>Manager:</h4>
-<li><a href="#">Zidane</a></li>
+<li><a href="#">Zidane</a></li> -->

@@ -1,0 +1,20 @@
+{
+  "name": "club-manager",
+  "description": "",
+  "main": "",
+  "authors": [
+    "michaelkoceja <michael.koceja@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/michaelkoceja/club-manager",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

@@ -1,22 +1,25 @@
 import { Injectable } from '@angular/core';
 import { Info } from './info.model';
 import { INFOS } from './mock-infos';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
 export class InfoService {
+  infos: FirebaseListObservable<any[]>;
 
-  constructor() { }
+  constructor(private database: AngularFireDatabase) {
+    this.infos = database.list('infos');
+  }
 
   getInfos() {
-    return INFOS;
+    return this.infos;
   }
 
-  getInfoById(infoId: number) {
-  for (var i = 0; i <= INFOS.length - 1; i++) {
-    if (INFOS[i].id === infoId) {
-      return INFOS[i];
-    }
-  }
+  addInfo(newInfo: Info) {
+    this.infos.push(newInfo);
 }
 
+  getInfoById(infoId: string){
+    return this.database.object('infos/' + infoId);
+  }
 }

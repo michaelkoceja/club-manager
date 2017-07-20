@@ -1,0 +1,33 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3>Add a New Player to the Roster</h3>
+  </div>
+    <div class="panel-body">
+      <div>
+      <div>
+        <label>Player Name:</label>
+        <br>
+        <input #newName>
+      </div>
+
+      <div>
+        <label>Player Age:</label>
+        <br>
+        <input #newAge>
+      </div>
+
+      <div>
+        <label>Player Position:</label>
+        <br>
+        <textarea #newPosition></textarea>
+      </div>
+
+      <div>
+        <label>Player Bio:</label>
+        <br>
+        <textarea #newBio></textarea>
+      </div>
+      <button (click)="submitForm(newName.value, newAge.value, newPosition.value, newBio.value); newName.value=''; newAge.value=''; newPosition.value=''; newBio.value='';">Add Player</button>
+    </div>
+  </div>
+</div>

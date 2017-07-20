@@ -1,27 +1,6 @@
 <h3>Our Roster</h3>
-<h4>Keeper:</h4>
-<div *ngFor="let info of infos" (click)="goToDetailPage(info)" class="panel panel-default">
+<div *ngFor="let info of infos | async" (click)="goToDetailPage(info)" class="panel panel-default">
   <div class="panel-body">
     <h3><strong>{{info.name}}</strong> <em>{{info.position}}</em></h3>
   </div>
 </div>
-
-
-
-
-<!-- <li><a href="#">Keylor Navas</a></li>
-<h4>Defenders:</h4>
-<li><a href="#">Carvajal</a></li>
-<li><a href="#">Varane</a></li>
-<li><a href="#">Ramos</a></li>
-<li><a href="#">Marcelo</a></li>
-<h4>Midfield:</h4>
-<li><a href="#">Casemiro</a></li>
-<li><a href="#">Kroos</a></li>
-<li><a href="#">Modric</a></li>
-<h4>Forward:</h4>
-<li><a href="#">Isco</a></li>
-<li><a href="#">Ronaldo</a></li>
-<li><a href="#">Benzema</a></li>
-<h4>Manager:</h4>
-<li><a href="#">Zidane</a></li> -->

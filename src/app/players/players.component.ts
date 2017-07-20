@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Info } from '../info.model';
 import { Router } from '@angular/router';
 import { InfoService } from '../info.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { InfoService } from '../info.service';
   providers: [InfoService]
 })
 export class PlayersComponent implements OnInit {
-  infos: Info[];
+  infos: FirebaseListObservable<any[]>;
 
 
   constructor(private router: Router, private infoService: InfoService) {}
@@ -20,7 +21,7 @@ export class PlayersComponent implements OnInit {
     this.infos = this.infoService.getInfos();
   }
 
-  goToDetailPage(clickedInfo: Info) {
-    this.router.navigate(['players', clickedInfo.id]);
+  goToDetailPage(clickedInfo) {
+    this.router.navigate(['players', clickedInfo.$key]);
   };
 }

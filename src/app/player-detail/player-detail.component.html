@@ -1,6 +1,6 @@
 <div>
-  <h3>{{infoToDisplay.name}}</h3>
-  <h4>{{infoToDisplay.age}}</h4>
-  <p>{{infoToDisplay.position}}</p>
-  <p>{{infoToDisplay.bio}}</p>
+  <h3>{{(infoToDisplay | async)?.name}}</h3>
+  <h4>{{(infoToDisplay | async)?.age}}</h4>
+  <p>{{(infoToDisplay | async)?.position}}</p>
+  <p>{{(infoToDisplay | async)?.bio}}</p>
 </div>

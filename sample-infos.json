@@ -1,0 +1,20 @@
+{ "infos": [{
+    "name": "Keylor Navas",
+    "age": 30,
+    "postion": "Keeper",
+    "bio":"He is quick, has great reflexes, always positions himself well and is one of the best in one-to-ones; Keylor Navas has everything it takes to be an exceptional keeper.",
+    "id": "1"
+    }, {
+      "name": "Daniel Carvajal Ramos",
+      "age": 25,
+      "postion": "Defender",
+      "bio":"Local full-back Dani Carvajal started his career at the Real Madrid youth academy and is particularly noted for his speed and the composure he displays in his position.",
+      "id": "2"
+      }, {
+        "name": "Marcelo Viera",
+        "age": 29,
+        "postion": "Defender",
+        "bio":"Defender', 'Marcelo came to Europe when he was 18 having already triumphed in Brazil. He is a very fast, attacking full-back who has worked hard since his arrival to take the opportunities that his coaches have given him to secure a place in the first team.",
+        "id": "3"
+  }]
+}

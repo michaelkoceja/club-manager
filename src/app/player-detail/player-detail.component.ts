@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Info } from '../info.model';
 import { InfoService } from '../info.service';
+import { FirebaseObjectObservable } from 'angularfire2/database';
 
 
 @Component({
@@ -12,15 +13,15 @@ import { InfoService } from '../info.service';
   providers: [InfoService]
 })
 export class PlayerDetailComponent implements OnInit {
-  infoId: number;
-  infoToDisplay: Info;
+  infoId: string;
+  infoToDisplay;
 
   constructor(private route: ActivatedRoute, private location: Location, private infoService: InfoService) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.infoId = parseInt(urlParameters['id']);
+      this.infoId = (urlParameters['id']);
     });
-    this.infoToDisplay = this.infoService.getInfoById(this.infoId)
+    this.infoToDisplay = this.infoService.getInfoById(this.infoId);
   }
 }

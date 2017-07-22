@@ -6,7 +6,7 @@
 
 ## Description
 
-* This is a project demonstrating my ability with the angular CLI after just one week of exposure. Here's what I came up with!
+* This is a project showing my ability with Angular CLI with just one week of training.
 
 ## User Story:
 

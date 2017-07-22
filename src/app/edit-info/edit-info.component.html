@@ -1,0 +1,21 @@
+<h4>Edit Players Information</h4>
+
+<label>New Name:</label>
+<input [(ngModel)]="selectedInfo.name">
+<br>
+
+<label>New Age:</label>
+<input [(ngModel)]="selectedInfo.age">
+<br>
+
+<label>New Position:</label>
+<input [(ngModel)]="selectedInfo.position">
+<br>
+
+<label>New Bio:</label>
+<input [(ngModel)]="selectedInfo.bio">
+<br>
+
+<button (click)="beginUpdatingInfo(selectedInfo)">Update</button>
+
+<button (click)="beginDeletingInfo(selectedInfo)">Remove</button>

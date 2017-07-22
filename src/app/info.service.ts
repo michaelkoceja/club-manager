@@ -22,4 +22,17 @@ export class InfoService {
   getInfoById(infoId: string){
     return this.database.object('infos/' + infoId);
   }
+
+  updateInfo(localUpdatedInfo){
+  var infoEntryInFirebase = this.getInfoById(localUpdatedInfo.$key);
+  infoEntryInFirebase.update({name: localUpdatedInfo.name,
+                              age: localUpdatedInfo.age,
+                              position: localUpdatedInfo.position,
+                              bio: localUpdatedInfo.bio});
+  }
+
+  deleteInfo(localInfoToDelete){
+    var infoEntryInFirebase = this.getInfoById(localInfoToDelete.$key);
+    infoEntryInFirebase.remove();
+  }
 }

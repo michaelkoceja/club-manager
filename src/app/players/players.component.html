@@ -1,6 +1,14 @@
 <h3>Our Roster</h3>
-<div *ngFor="let info of infos | async" (click)="goToDetailPage(info)" class="panel panel-default">
+<div *ngFor="let info of infos | async" class="panel panel-default">
   <div class="panel-body">
-    <h3><strong>{{info.name}}</strong> <em>{{info.position}}</em></h3>
+    <h3 (click)="goToDetailPage(info)"><strong>{{info.name}}</strong> <em>{{info.position}}</em></h3>
+    <div *ngIf="currentRoute === '/manager'">
+      <li>{{info.name}}</li>
+      <li>{{info.age}}</li>
+      <li>{{info.position}}</li>
+      <li>{{info.bio}}</li>
+  <hr>
+  <app-edit-info [selectedInfo]="info"></app-edit-info>
+</div>
   </div>
 </div>

@@ -13,6 +13,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2'
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { ManagerComponent } from './manager/manager.component';
+import { EditInfoComponent } from './edit-info/edit-info.component';
 
 
 export const firebaseConfig = {
@@ -30,6 +31,7 @@ export const firebaseConfig = {
     PlayersComponent,
     PlayerDetailComponent,
     ManagerComponent,
+    EditInfoComponent,
   ],
   imports: [
     BrowserModule,
